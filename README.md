@@ -1,5 +1,3 @@
-﻿# Qiniu Webpack Plugin 
->  Webpack 编译后的文件上传到 七牛云存储
 
 ## 功能
 
@@ -13,7 +11,7 @@ yarn add vite-plugin-qiniu-oss
 
 ## 使用
 
-**webpack.config.js**
+**vite.config.js**
 
 ```Javascript
 const vitePluginQiniuOss = require('vite-plugin-qiniu-oss');
@@ -47,9 +45,7 @@ module.exports = {
 
 **Options**
 
-
 ***
-
 
 ## License
 lsc
