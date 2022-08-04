@@ -25,9 +25,9 @@ export default defineConfig({
 })
 ```
 
-在项目目录下新建 `.qiniu-webpack` 文件，并且在 `.gitignore` 忽略此文件
+在项目目录下新建 `.qiniu.config` 文件，并且在 `.gitignore` 忽略此文件
 
-**.qiniu-webpack**
+**.qiniu.config**
 
 ```Javascript
 module.exports = {

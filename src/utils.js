@@ -7,7 +7,7 @@ const mm = require('micromatch')
 const request = require('request-promise');
 const { resolve } = require('path');
 
-const CONFIG_FILENAME = '.qiniu-webpack';
+const CONFIG_FILENAME = '.qiniu.config';
 const LOG_FILENAME = '__qiniu__vite__plugin__files.json';
 
 module.exports = {
