@@ -11,10 +11,8 @@ const {
 	combineFiles, 
 	validateOptions, 
 	getFileOptions, 
-	matchFiles, 
 	getLogFile, 
 	mapLimit, 
-	deleteOldFiles, 
 	writeLogFile
 } = require('./src/utils');
 
@@ -34,7 +32,7 @@ module.exports = function vitePluginQiniuOss() {
 		apply: 'build',
 		configResolved(config) {
 			baseConfig = config.base
-			buildConfig = config.build
+      		buildConfig = config.build
 		},
 		async closeBundle() {
 			const outDirPath = normalizePath(path.resolve(normalizePath(buildConfig.outDir)))
@@ -54,21 +52,19 @@ module.exports = function vitePluginQiniuOss() {
 					strict: true,
 					nodir: true,
 					dot: true,
-					ignore: options.matchFiles ? options.matchFiles : '**/*.html'
+					ignore: options.ignore ? options.ignore : '**/*.html'
 				}
 			)
 
 			reporter.log = '=====qiniu oss 开始上传=====  \n';
 
 			const startTime = new Date().getTime()
-			const fileNames = files.map(item => {
+			const releaseFiles = files.map(item => {
 				return item.split(outDirPath)[1]
 			})
 
 			reporter.log = '=====正在获取历史数据=====  \n';
 
-			// 处理文件过滤
-			const releaseFiles = matchFiles(fileNames, createOssOption);
 
 			// 获取文件日志
 			const {

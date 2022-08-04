@@ -96,9 +96,6 @@ module.exports = {
 				uploadPath: {
 					type: 'string'
 				},
-				matchFiles: {
-					type: 'array'
-				},
 				batch: {
 					type: 'number'
 				},
