@@ -30,13 +30,14 @@ export default defineConfig({
 **.qiniu.config**
 
 ```Javascript
+const uploadPath = require('./package.json').name;
 module.exports = {
   accessKey: 'qiniu access key', // required
   secretKey: 'qiniu secret key', // required
   bucket: 'demo', // required
   bucketDomain: 'https://domain.bkt.clouddn.com', // required
   matchFiles: ['!*.html', '!*.map'],
-  uploadPath: '/assets',
+  uploadPath: `/${uploadPath}/`,
   usePublicPath: true,
   batch: 10,
   deltaUpdate: true
