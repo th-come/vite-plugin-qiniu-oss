@@ -6,6 +6,10 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
+	"repository": {
+		"type": "git",
+		"url": "http://gitlab.ylwnl.com/th/vite-plugin-qiniu-oss.git"
+	},
 	"author": "th",
 	"license": "ISC",
 	"dependencies": {
