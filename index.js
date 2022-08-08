@@ -16,13 +16,19 @@ const {
 	writeLogFile
 } = require('./src/utils');
 
-module.exports = function vitePluginQiniuOss() {
+module.exports = function vitePluginQiniuOss(openUpload) {
 	let baseConfig = '/'
 	let buildConfig = ''
 	const options = getFileOptions()
 	const reporter = new Reporter('\n');
 
+	if(!openUpload) {
+		reporter.stop()
+		return
+	}
+
 	if (!validateOptions(options)) {
+		reporter.stop()
 		return
 	}
 
