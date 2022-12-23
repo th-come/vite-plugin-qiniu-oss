@@ -1,12 +1,11 @@
-
 ## 功能
 
 静态资源自动上传七牛云
 
 ## 安装
 
-npm install vite-plugin-qiniu-oss       
-或者使用      
+npm install vite-plugin-qiniu-oss  
+或者使用  
 yarn add vite-plugin-qiniu-oss
 
 ## 使用
@@ -32,7 +31,7 @@ export default defineConfig({
 ```Javascript
 const uploadPath = require('./package.json').name;
 module.exports = {
-  accessKey: 'qiniu access key', // required
+   accessKey: 'qiniu access key', // required
   secretKey: 'qiniu secret key', // required
   bucket: 'demo', // required
   bucketDomain: 'https://domain.bkt.clouddn.com', // required
@@ -40,13 +39,14 @@ module.exports = {
   uploadPath: `/${uploadPath}/`,
   usePublicPath: true,
   batch: 10,
-  deltaUpdate: true
+  zone: 'Zone_z0' // 七牛机房位置
 }
 ```
 
 **Options**
 
-***
+---
 
 ## License
+
 lsc

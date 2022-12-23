@@ -44,12 +44,13 @@ module.exports = function vitePluginQiniuOss(openUpload) {
 			const outDirPath = normalizePath(path.resolve(normalizePath(buildConfig.outDir)))
 
 			const createOssOption = Object.assign({}, options)
-			const { accessKey, secretKey, bucket, bucketDomain } = createOssOption;
+			const { accessKey, secretKey, bucket, bucketDomain, zone } = createOssOption;
 			const qiniu = new Qiniu({
 				accessKey,
 				secretKey,
 				bucket,
-				domain: bucketDomain
+				domain: bucketDomain,
+				zone
 			})
 
 			const files = await glob.sync(

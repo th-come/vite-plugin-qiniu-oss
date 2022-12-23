@@ -1,11 +1,11 @@
 const qiniu = require('qiniu');
 
 class Qiniu {
-	constructor({ bucket, accessKey, secretKey, domain }) {
+	constructor({ bucket, accessKey, secretKey, domain, zone = 'Zone_z0' }) {
 		this._domain = domain;
 		this._bucket = bucket;
 		const config = new qiniu.conf.Config();
-		config.zone = qiniu.zone.Zone_z0;
+		config.zone = qiniu.zone[zone];
 		this._config = config;
 		this._mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
 		this._bucketManager = new qiniu.rs.BucketManager(this._mac, this._config);

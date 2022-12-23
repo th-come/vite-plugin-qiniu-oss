@@ -1,14 +1,13 @@
 const uploadPath = require('./package.json').name;
 
 module.exports = {
-	accessKey: '7PxNYDcrqfcsjGVQwI7xBHJ1_jsbpzaiiJIlI30_',
-	secretKey: 'SQBkKHUzEfYoHf2V_CcM_uLM9vV1IbRlRzgUoIMa',
-	bucket: 'wnlother',
-	bucketDomain: 'https://qiniu.other.cq-wnl.com/',
+	accessKey: 'xxxxx',
+	secretKey: 'xxxx',
+	bucket: 'xxxx',
+	bucketDomain: 'https://example.com/',
 	uploadPath: `/${uploadPath}/`,
 	usePublicPath: true,
 	batch: 10,
-	deltaUpdate: true,
-	createCli: 'vue',
-	ignore: ['**/*.html', '**/*.map']
+	ignore: ['**/*.html', '**/*.map'],
+	zone: 'Zone_z0'
 }
