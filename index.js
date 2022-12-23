@@ -1,4 +1,4 @@
-const color = require('picocolors')
+const chalk = require('chalk')
 const glob = require('glob')
 const path = require('path')
 const { URL } = require('url')
@@ -109,8 +109,7 @@ module.exports = function vitePluginQiniuOss(openUpload) {
 					}
 				);
 			} catch (e) {
-				console.error(chalk.bold.red('\n\n上传失败:'));
-				callback(e);
+				console.error(chalk.bold.red('\n\n上传失败:', e));
 			}
 
 			const duration = (new Date().getTime() - startTime) / 1000
