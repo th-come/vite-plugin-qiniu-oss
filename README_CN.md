@@ -77,9 +77,9 @@ npm/yarn run build
 | options         | description                                             | type    | default       |
 |-----------------|---------------------------------------------------------|---------|---------------|
 | accessKey       | 七牛云 oss 秘钥                                          | string  |               |
-| secretKey       | 七牛云 oss 访问秘钥                                       | string  |               |
-| bucket          | 七牛云 oss 储空间名称                                     | string  |               |
-| bucketDomain    | 七牛云 oss 储空域名                                 	  | string  |               |
+| secretKey       | 七牛云 oss 访问秘钥                                      | string  |               |
+| bucket          | 七牛云 oss 存储空间名称                                   | string  |               |
+| bucketDomain    | 七牛云 oss 存储空域名                                 	  | string  |               |
 | ignore      	  | 文件规则	默然会上传除去html以外所有静态资源文件           | (string or array)  |  `'**/*.html'` |
 | uploadPath      | 七牛云 oss 上传储存空间文件名								| string  |               |
 | batch           | 同步上传文件个数                                 		   | number | 10         	|
