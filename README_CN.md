@@ -18,12 +18,6 @@ vite-plugin-qiniu-oss
 ![preview](https://qiniu.other.cq-wnl.com/1672044500.png)
 # 安装
 
-```
-pnpm i -D vite-plugin-qiniu-oss
-```
-
-或者
-
 ```bash
 yarn add -D vite-plugin-qiniu-oss
 ```
