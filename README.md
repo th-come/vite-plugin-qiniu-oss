@@ -17,8 +17,7 @@ Note: Upload all files except html files, because html files have no hash and ar
 
 # Preview
 
-![preview](https://qiniu.other.cq-wnl.com/1672044545.png)
-![preview](https://qiniu.other.cq-wnl.com/1672044500.png)
+![preview](https://qiniu.other.cq-wnl.com/1672046727.jpg)
 
 # Installation
 

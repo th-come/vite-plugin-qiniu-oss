@@ -14,8 +14,8 @@ vite-plugin-qiniu-oss
 
 效果预览：
 
-![preview](https://qiniu.other.cq-wnl.com/1672044545.png)
-![preview](https://qiniu.other.cq-wnl.com/1672044500.png)
+![preview](https://qiniu.other.cq-wnl.com/1672046727.jpg)
+
 # 安装
 
 ```bash
