@@ -31,15 +31,14 @@ export default defineConfig({
 ```Javascript
 const uploadPath = require('./package.json').name;
 module.exports = {
-   accessKey: 'qiniu access key', // required
+  accessKey: 'qiniu access key', // required
   secretKey: 'qiniu secret key', // required
   bucket: 'demo', // required
   bucketDomain: 'https://domain.bkt.clouddn.com', // required
-  matchFiles: ['!*.html', '!*.map'],
   uploadPath: `/${uploadPath}/`,
-  usePublicPath: true,
   batch: 10,
-  zone: 'Zone_z0' // 七牛机房位置
+  zone: 'Zone_z0',
+  ignore: ['**/*.html', '**/*.map']
 }
 ```
 
