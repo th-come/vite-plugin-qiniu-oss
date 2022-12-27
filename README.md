@@ -1,7 +1,6 @@
 vite-plugin-qiniu-oss
 =======
-![license](https://img.shields.io/npm/l/vite-plugin-ali-oss)
-![downloads](https://img.shields.io/npm/dt/vite-plugin-ali-oss)
+![license](https://qiniu.other.cq-wnl.com/1672110731.png)
 
 Upload the production files bundled in the project to qiniu OSS, except for html
 
