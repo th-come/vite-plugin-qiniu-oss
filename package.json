@@ -26,9 +26,9 @@
 		"revalidator": "^0.3.1"
 	},
 	"peerDependencies": {
-		"vite": "^2"
+		"vite": "^3"
 	},
 	"publishConfig": {
-		"registry": "http://192.168.1.130:4873/"
+		"registry": "https://registry.npmjs.org/"
 	}
 }
