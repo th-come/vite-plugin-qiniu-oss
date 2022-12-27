@@ -38,11 +38,15 @@ npm i -D vite-plugin-qiniu-oss
 
 ```Javascript
 import vitePluginQiniuOss from 'vite-plugin-qiniu-oss'
-import packageJson from './package.json'
+const uploadPath = require('./package.json').name;
 
-export default defineConfig({
-	base: import.meta.env.NODE_ENV == 'production'? `https://qiniu.xxx.com/${packageJson.name}/`: `./`,, 
-	plugins: [vitePluginQiniuOss()]
+export default defineConfig(() => {
+	const openUpload = process.env.NODE_ENV == 'production' ? true : false
+
+	return {
+		base: openUpload ? `https://qiniu.xxx.com/${uploadPath}/`: `./`, // same with webpack public path
+		plugins: [vue(), vitePluginQiniuOss(openUpload)]
+	}
 })
 
 // create file: `.qiniu.config.js`

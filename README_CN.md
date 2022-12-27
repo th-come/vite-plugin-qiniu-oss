@@ -35,11 +35,15 @@ npm i -D vite-plugin-qiniu-oss
 
 ```Javascript
 import vitePluginQiniuOss from 'vite-plugin-qiniu-oss'
-import packageJson from './package.json'
+const uploadPath = require('./package.json').name;
 
-export default defineConfig({
-	base: import.meta.env.NODE_ENV == 'production'? `https://qiniu.xxx.com/${packageJson.name}/`: `./`,, 
-	plugins: [vitePluginQiniuOss()]
+export default defineConfig(() => {
+	const openUpload = process.env.NODE_ENV == 'production' ? true : false
+
+	return {
+		base: openUpload ? `https://qiniu.xxx.com/${uploadPath}/`: `./`, // same with webpack public path
+		plugins: [vue(), vitePluginQiniuOss(openUpload)]
+	}
 })
 
 // 新建`.qiniu.config.js`配置文件，并且在 `.gitignore` 忽略此文件
