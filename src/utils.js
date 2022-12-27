@@ -30,15 +30,14 @@ module.exports = {
 	 * 
 	 */
 	combineFiles(prevFiles, currentFiles, releaseFiles) {
-		console.log('prevFiles', prevFiles)
-		console.log('currentFiles', currentFiles)
-		console.log('releaseFiles', releaseFiles)
-
 		let deleteFiles = difference(prevFiles, currentFiles);
 		let uploadFiles = difference(releaseFiles, currentFiles);
 
 		deleteFiles = difference(deleteFiles, uploadFiles);
 
+		console.log('currentFiles', currentFiles)
+		console.log('releaseFiles', releaseFiles)
+		console.log('uploadFiles', uploadFiles)
 		// 返回最终要上传的文件列表
 		return {
 			uploadFiles,
