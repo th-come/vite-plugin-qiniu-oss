@@ -8,7 +8,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "http://gitlab.ylwnl.com/th/vite-plugin-qiniu-oss.git"
+		"url": "https://github.com/th-come/vite-plugin-qiniu-oss.git"
 	},
 	"author": "th",
 	"license": "ISC",
