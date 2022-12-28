@@ -1,6 +1,6 @@
 {
 	"name": "vite-plugin-qiniu-oss",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "vite-plugin qiniu cdn oss",
 	"main": "index.js",
 	"scripts": {
