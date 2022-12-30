@@ -63,27 +63,26 @@ module.exports = function vitePluginQiniuOss(openUpload) {
 				}
 			)
 
-			reporter.log = '=====qiniu oss 开始上传=====  \n';
+			reporter.log = '=====qiniu oss start upload=====  \n';
 
 			const startTime = new Date().getTime()
 			const releaseFiles = files.map(item => {
 				return item.split(outDirPath)[1]
 			})
 
-			reporter.log = '=====正在获取历史数据=====  \n';
+			reporter.log = '=====get history data=====  \n';
 
 
-			// 获取文件日志
+			// files log
 			const {
 				uploadTime,
 				prev: prevFiles = [],
 				current: currentFiles = []
 			} = await getLogFile(createOssOption, qiniu);
 
-			// 合并去重，提取最终要上传和删除的文件
 			const { uploadFiles, deleteFiles } = combineFiles(prevFiles, currentFiles, releaseFiles);
 
-			reporter.log = `=====将上传 ${uploadFiles.length} 个文件=====`;
+			reporter.log = `=====will upload ${uploadFiles.length} files=====`;
 
 			const uploadFileTasks = uploadFiles.map((filename, index) => {
 				const localUrl= outDirPath + filename
@@ -109,17 +108,17 @@ module.exports = function vitePluginQiniuOss(openUpload) {
 					}
 				);
 			} catch (e) {
-				console.error(chalk.bold.red('\n\n上传失败:', e));
+				console.error(chalk.bold.red('\n\nupload fail:', e));
 			}
 
 			const duration = (new Date().getTime() - startTime) / 1000
-			console.log(`=====上传完毕, cost ${duration.toFixed(2)}s`)
+			console.log(`=====upload done, cost ${duration.toFixed(2)}s`)
 			
-			reporter.text = `=====正在写入日志...\n`;
+			reporter.text = `====write log...\n`;
 			await writeLogFile({currentFiles, releaseFiles, qiniu, createOssOption});
-			reporter.log = `=====日志记录完毕\n`
+			reporter.log = `=====log complete\n`
 
-			reporter.succeed('===== \n');
+			reporter.succeed('=====upload success \n');
 		}
 	}
 }

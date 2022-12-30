@@ -16,7 +16,7 @@ Note: Upload all files except html files, because html files have no hash and ar
 
 # Preview
 
-![preview](https://qiniu.other.cq-wnl.com/1672107090.jpg)
+![preview](https://qiniu.other.cq-wnl.com/1672381353.png)
 
 # Installation
 
@@ -76,13 +76,13 @@ The plugin will upload files of outDir path after bundle.
 
 | options         | description                                             | type    | default       |
 |-----------------|---------------------------------------------------------|---------|---------------|
-| accessKey       | 七牛云 oss 秘钥                                          | string  |               |
-| secretKey       | 七牛云 oss 访问秘钥                                      | string  |               |
-| bucket          | 七牛云 oss 存储空间名称                                   | string  |               |
-| bucketDomain    | 七牛云 oss 存储空域名                                 	  | string  |               |
-| ignore      	  | 文件规则	默然会上传除去html以外所有静态资源文件           | (string or array)  |  `'**/*.html'` |
-| uploadPath      | 七牛云 oss 上传储存空间文件名								| string  |               |
-| batch           | 同步上传文件个数                                 		   | number | 10         	|
-| zone            | 储存空间机房名                                             | string | `'Zone_z0'`    |
-| ...             | 其他初始化 oss 的参数，详细信息请见 https://developer.qiniu.com/kodo/sdk/nodejs | any | |
+| accessKey       | qiniu oss accessKey                                     | string  |               |
+| secretKey       | qiniu oss secretKey                                     | string  |               |
+| bucket          | qiniu oss bucket name                                   | string  |               |
+| bucketDomain    | qiniu oss bucket domain                                 | string  |               |
+| ignore      	  | ignore file rules, silently upload all static resource files except html           | (string or array)  | `'**html'` |
+| uploadPath      | qiniu oss upload storage file name						| string  |               |
+| batch           | the number of files uploaded synchronously              | number | 10         	|
+| zone            | storage room name                                       | string | `'Zone_z0'`    |
+| ...             | other parameters to initialize oss, see for details https://developer.qiniu.com/kodo/sdk/nodejs | any | |
 
