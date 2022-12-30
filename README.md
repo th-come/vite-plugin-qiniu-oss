@@ -80,7 +80,7 @@ The plugin will upload files of outDir path after bundle.
 | secretKey       | qiniu oss secretKey                                     | string  |               |
 | bucket          | qiniu oss bucket name                                   | string  |               |
 | bucketDomain    | qiniu oss bucket domain                                 | string  |               |
-| ignore      	  | ignore file rules, silently upload all static resource files except html           | (string or array)  | `'**html'` |
+| ignore      	  | ignore file rules, silently upload all static resource files except html     | (string or array)  | `'**/*.html'` |
 | uploadPath      | qiniu oss upload storage file name						| string  |               |
 | batch           | the number of files uploaded synchronously              | number | 10         	|
 | zone            | storage room name                                       | string | `'Zone_z0'`    |
