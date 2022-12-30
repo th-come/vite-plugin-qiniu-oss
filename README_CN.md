@@ -38,12 +38,12 @@ import vitePluginQiniuOss from 'vite-plugin-qiniu-oss'
 const uploadPath = require('./package.json').name;
 
 export default defineConfig(() => {
-	const openUpload = process.env.NODE_ENV == 'production' ? true : false
+  const openUpload = process.env.NODE_ENV == 'production' ? true : false
 
-	return {
-		base: openUpload ? `https://qiniu.xxx.com/${uploadPath}/`: `./`, // same with webpack public path
-		plugins: [vue(), vitePluginQiniuOss(openUpload)]
-	}
+  return {
+    base: openUpload ? `https://qiniu.xxx.com/${uploadPath}/`: `./`, // same with webpack public path
+	plugins: [vue(), vitePluginQiniuOss(openUpload)]
+  }
 })
 
 // 新建`.qiniu.config.js`配置文件，并且在 `.gitignore` 忽略此文件

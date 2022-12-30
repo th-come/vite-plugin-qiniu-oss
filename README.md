@@ -41,12 +41,12 @@ import vitePluginQiniuOss from 'vite-plugin-qiniu-oss'
 const uploadPath = require('./package.json').name;
 
 export default defineConfig(() => {
-	const openUpload = process.env.NODE_ENV == 'production' ? true : false
+  const openUpload = process.env.NODE_ENV == 'production' ? true : false
 
-	return {
-		base: openUpload ? `https://qiniu.xxx.com/${uploadPath}/`: `./`, // same with webpack public path
-		plugins: [vue(), vitePluginQiniuOss(openUpload)]
-	}
+  return {
+    base: openUpload ? `https://qiniu.xxx.com/${uploadPath}/`: `./`, // same with webpack public path
+	plugins: [vue(), vitePluginQiniuOss(openUpload)]
+  }
 })
 
 // create file: `.qiniu.config.js`
