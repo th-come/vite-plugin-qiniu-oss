@@ -24,7 +24,7 @@ Note: Upload all files except html files, because html files have no hash and ar
 yarn add -D vite-plugin-qiniu-oss
 ```
 
-或者
+or
 
 ```bash
 npm i -D vite-plugin-qiniu-oss
